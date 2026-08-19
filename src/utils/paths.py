@@ -2,6 +2,8 @@ import sys
 import os
 from pathlib import Path
 
+from constans import CONFIG_FILE
+
 def get_base_path() -> Path:
     if getattr(sys, "frozen", False):
         return Path(sys._MEIPASS)
@@ -18,3 +20,6 @@ def get_logs_path() -> Path:
         path.mkdir(exist_ok=True)
 
         return path
+
+def get_config_path() -> Path:
+    return get_resources_path(f"config/{CONFIG_FILE}")
