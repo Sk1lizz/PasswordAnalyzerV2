@@ -5,7 +5,7 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 from src.utils.paths import get_logs_path
-from src.utils.constans import (
+from src.utils.config import (
     LOG_CONSOLE_LEVEL,
     LOG_FILE_LEVEL,
     LOG_FORMAT,
