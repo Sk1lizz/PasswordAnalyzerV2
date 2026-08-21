@@ -1,0 +1,19 @@
+{
+    "APP_SETTING": {
+        "Name": "PasswordAnalyzerV2",
+        "Version": "2.0.0",
+        "Year": "2026"
+    },
+    
+    "LOGS": {
+        "Console_Level": 20,
+        "File_Level": 10,
+        "Format": "[%(levelname)s] %(asctime)s - %(message)s",
+        "Date_Format": "%Y-%m-%d %H:%M:%S",
+        "File": "passwordanalyzer.log",
+        "Max_Bytes": "0 * 1024 * 1024",
+        "Backup_Count": 10
+    },
+
+    "Default_Language": "ru-RU"
+}
