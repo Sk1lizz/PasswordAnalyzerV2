@@ -1,0 +1,40 @@
+{
+    "analyzer": {
+        "lowercase_letter": "abcdefghijklmnopqrstuvwxyz",
+        "uppercase_letter": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "number": "0123456789",
+        "special": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+
+        "rules": {
+            "symbol": {
+                "enable": true,
+                "min": 8,
+                "better": 16
+            },
+
+            "lowercase_letter": {
+                "enable": true,
+                "list_symbol": "abcdefghijklmnopqrstuvwxyz"
+            },
+
+            "uppercase_letter": {
+                "enable": true,
+                "list_symbol": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            },
+
+            "number": {
+                "enable": true,
+                "list_symbol": "0123456789"
+            },
+
+            "special": {
+                "enable": true,
+                "list_symbol": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+            },
+
+            "entropy": {
+                "enable": true
+            }
+        }
+    }
+}
