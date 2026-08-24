@@ -2,7 +2,10 @@ import sys
 import os
 from pathlib import Path
 
-from constans import CONFIG_FILE
+from src.utils.constans import (
+    CONFIG_FILE,
+    SETTING_FILE,
+)
 
 def get_base_path() -> Path:
     if getattr(sys, "frozen", False):
@@ -23,3 +26,6 @@ def get_logs_path() -> Path:
 
 def get_config_path() -> Path:
     return get_resources_path(f"config/{CONFIG_FILE}")
+
+def get_setting_path() -> Path:
+    return get_resources_path(f"config/{SETTING_FILE}")
