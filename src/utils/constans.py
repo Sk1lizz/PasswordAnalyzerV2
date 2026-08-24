@@ -41,3 +41,46 @@ LOG_BACKUP_COUNT = 10           # На релизе изменить на 3/5. �
 
 DEFAULT_LANGUAGE = "ru-RU"
 CONFIG_FILE = "config.json"
+SETTING_FILE = "setting.json"
+
+
+DEFAULT_SETTING = {
+    "analyzer": {
+        "lowercase_letter": "abcdefghijklmnopqrstuvwxyz",
+        "uppercase_letter": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "number": "0123456789",
+        "special": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+
+        "rules": {
+            "symbol": {
+                "enable": True,
+                "min": 8,
+                "better": 16
+            },
+
+            "lowercase_letter": {
+                "enable": True,
+                "list_symbol": "abcdefghijklmnopqrstuvwxyz"
+            },
+
+            "uppercase_letter": {
+                "enable": True,
+                "list_symbol": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            },
+
+            "number": {
+                "enable": True,
+                "list_symbol": "0123456789"
+            },
+
+            "special": {
+                "enable": True,
+                "list_symbol": "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+            },
+
+            "entropy": {
+                "enable": True
+            }
+        }
+    },
+}

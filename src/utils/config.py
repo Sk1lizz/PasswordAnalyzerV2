@@ -1,7 +1,8 @@
 import json
+from pathlib import Path
 
-from paths import get_config_path
-from constans import (
+from src.utils.paths import get_config_path
+from src.utils.constans import (
     APP_NAME as _name,
     APP_VERSION as _version,
     APP_AUTHOR as _author,
@@ -17,11 +18,10 @@ from constans import (
     LOG_BACKUP_COUNT as _log_backup,
     DEFAULT_LANGUAGE as _lang,
     CONFIG_FILE as _cfg,
+    SETTING_FILE as _setting,
 )
 
-path = str(get_config_path())
-
-def get_data() -> dict:
+def get_data(path: Path) -> dict:
     try:
         with open(path, "r", encoding="utf-8") as file:
             config_data = json.load(file)
@@ -31,7 +31,7 @@ def get_data() -> dict:
 
     return config_data
 
-data = get_data()
+data = get_data(path=get_config_path())
 
 try: 
     data_app = data["APP_SETTING"]
@@ -68,8 +68,6 @@ try:
     for _symbol in data_logs["Max_Bytes"].split(" * "):
         _max_bytes *= int(_symbol)
 
-    print(_max_bytes)
-
 
 except:
     data_logs = {
@@ -97,3 +95,4 @@ except:
     DEFAULT_LANGUAGE = _lang
 
 CONFIG_FILE = _cfg
+SETTING_FILE = _setting
