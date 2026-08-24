@@ -11,7 +11,7 @@
         "Format": "[%(levelname)s] %(asctime)s - %(message)s",
         "Date_Format": "%Y-%m-%d %H:%M:%S",
         "File": "passwordanalyzer.log",
-        "Max_Bytes": "0 * 1024 * 1024",
+        "Max_Bytes": "10 * 1024 * 1024",
         "Backup_Count": 10
     },
 
